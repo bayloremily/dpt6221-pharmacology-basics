@@ -1,3 +1,6 @@
+## Preview
+
+![Pharmacology Basics Interactive](assets/screenshot-home.png)
 # Pharmacology Basics for Physical Therapy
 
 ## Overview

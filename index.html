@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacology Basics for Physical Therapy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="hero">
+    <div class="hero__inner">
+      <div class="hero-content">
+        <p class="eyebrow">DPT 6221 Clinical Medicine II</p>
+        <h1>Pharmacology Basics for Physical Therapy</h1>
+      </div>
+    </div>
+  </header>
+
+  <section class="intro-card-wrap" aria-labelledby="intro-heading">
+    <div class="intro-card">
+      <p class="section-heading__kicker">How To Use</p>
+      <h2 id="intro-heading">Explore the dashboard like a quick clinical reference.</h2>
+      <p>
+        Jump between medication topics, review short PT-relevant notes, and keep the quiz visible while you explore.
+      </p>
+    </div>
+  </section>
+
+  <main id="main-content" class="dashboard">
+    <aside class="panel panel--selector" aria-labelledby="selector-heading">
+      <div class="section-heading">
+        <p class="section-heading__kicker">Navigate</p>
+        <h2 id="selector-heading">Choose a medication topic</h2>
+      </div>
+
+      <div id="topic-list" class="topic-list" aria-label="Medication topics"></div>
+    </aside>
+
+    <section class="panel panel--content" aria-labelledby="topic-title">
+      <div class="topic-header">
+        <p class="section-heading__kicker">Medication Reference</p>
+        <h2 id="topic-title"></h2>
+        <p id="topic-summary" class="section-intro"></p>
+      </div>
+
+      <div id="topic-content" class="topic-content"></div>
+    </section>
+
+    <aside class="panel panel--quiz" aria-labelledby="quiz-heading">
+      <div class="quiz-shell">
+        <div class="section-heading">
+          <p class="section-heading__kicker">Quick Check</p>
+          <h2 id="quiz-heading">PT Pharmacology Quiz</h2>
+        </div>
+
+        <div class="quiz-status" aria-live="polite">
+          <div class="status-chip">
+            <span>Progress</span>
+            <strong id="progress-display">1 / 5</strong>
+          </div>
+          <div class="status-chip">
+            <span>Score</span>
+            <strong id="score-display">0</strong>
+          </div>
+        </div>
+
+        <form id="quiz-form" class="quiz-form" novalidate></form>
+
+        <section id="quiz-summary" class="quiz-summary" aria-live="polite" aria-atomic="true">
+          <h3>Quiz Summary</h3>
+          <p id="summary-message">Answer the questions one at a time for immediate feedback.</p>
+          <ul id="missed-topics" class="missed-topics"></ul>
+        </section>
+
+        <div class="quiz-actions">
+          <button id="retry-missed-btn" class="button button--secondary" type="button">Retry Missed Questions</button>
+          <button id="reset-quiz-btn" class="button button--ghost" type="button">Reset Full Quiz</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="scorm.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

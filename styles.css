@@ -268,6 +268,50 @@ label {
   margin: 0;
 }
 
+.mini-reference-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.mini-reference-list__item {
+  padding-top: 0.15rem;
+}
+
+.mini-reference-list__item strong {
+  display: block;
+  color: var(--baylor-green);
+  margin-bottom: 0.2rem;
+}
+
+.definition-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+}
+
+.definition-list__row {
+  display: grid;
+  grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
+  gap: 0.8rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(21, 71, 52, 0.08);
+}
+
+.definition-list__row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.definition-list dt,
+.definition-list dd {
+  margin: 0;
+}
+
+.definition-list dt {
+  font-weight: 700;
+  color: var(--baylor-green);
+}
+
 .quiz-shell {
   display: grid;
   gap: 1rem;
@@ -491,7 +535,8 @@ label {
   }
 
   .topic-grid,
-  .quiz-status {
+  .quiz-status,
+  .definition-list__row {
     grid-template-columns: 1fr;
   }
 

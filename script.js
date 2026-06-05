@@ -7,7 +7,11 @@ const medicationData = [
     why: "Patients may take it for mild to moderate pain such as soreness, headache, or general discomfort.",
     relevance: "Pain may be lower during therapy, which can help movement and participation.",
     caution: "It does not reduce inflammation, and patients should avoid taking too much from combination products.",
-    example: "Example: A patient with knee soreness takes acetaminophen before outpatient exercise so moving feels more tolerable."
+    example: "A patient with knee soreness takes acetaminophen before outpatient exercise so moving feels more tolerable.",
+    painUse: [
+      "Acute mild pain: Often used when pain is present but symptoms are not severe.",
+      "Mild to moderate pain: A common option for general aches, soreness, or headache."
+    ]
   },
   {
     id: "nsaids",
@@ -17,7 +21,11 @@ const medicationData = [
     why: "Patients may take them for arthritis, strains, sprains, or other musculoskeletal pain.",
     relevance: "Less pain and swelling may make exercise, gait training, and daily movement easier.",
     caution: "Watch for stomach irritation, kidney concerns, or easy bruising in some patients.",
-    example: "Example: A patient with an ankle sprain may use an NSAID to reduce soreness and swelling before rehab."
+    example: "A patient with an ankle sprain may use an NSAID to reduce soreness and swelling before rehab.",
+    painUse: [
+      "Acute mild pain: Common when short-term pain relief is needed early after an injury.",
+      "Inflammatory pain: Often chosen when swelling and inflammation are part of the problem."
+    ]
   },
   {
     id: "opioids",
@@ -27,7 +35,11 @@ const medicationData = [
     why: "Patients may take them after surgery, fracture, or other more severe pain conditions.",
     relevance: "Lower pain can help activity, but drowsiness and slowed reactions can affect safe mobility.",
     caution: "Be alert for sedation, constipation, dizziness, and fall risk.",
-    example: "Example: A patient after joint replacement may have less pain for walking practice but seem sleepy during transfers."
+    example: "A patient after joint replacement may have less pain for walking practice but seem sleepy during transfers.",
+    painUse: [
+      "Acute severe pain: May be used when pain is too strong for simpler medications alone.",
+      "Severe visceral pain: Sometimes used when deep internal pain is especially intense."
+    ]
   },
   {
     id: "muscle-relaxants",
@@ -37,7 +49,10 @@ const medicationData = [
     why: "Patients may take them after an acute back strain or another spasm-related problem.",
     relevance: "Some patients move more comfortably, but alertness may be reduced during treatment.",
     caution: "Watch for fatigue, dizziness, and decreased attention during balance or gait work.",
-    example: "Example: A patient with acute low back spasm may report looser movement but also feel groggy in clinic."
+    example: "A patient with acute low back spasm may report looser movement but also feel groggy in clinic.",
+    painUse: [
+      "Pain with muscle spasm: May help when pain is linked to tightness or spasm rather than inflammation alone."
+    ]
   },
   {
     id: "statins",
@@ -47,7 +62,7 @@ const medicationData = [
     why: "Patients may take them for high cholesterol or prevention of heart disease.",
     relevance: "Most patients exercise normally, but muscle complaints can overlap with expected soreness.",
     caution: "If weakness or muscle pain seems unusual, encourage follow-up with the medical team.",
-    example: "Example: A patient in a walking program reports leg aching that feels different from normal exercise soreness."
+    example: "A patient in a walking program reports leg aching that feels different from normal exercise soreness."
   },
   {
     id: "beta-blockers",
@@ -57,7 +72,7 @@ const medicationData = [
     why: "Patients may take them for hypertension, arrhythmias, or other heart-related conditions.",
     relevance: "PTs may rely more on symptoms and rate of perceived exertion instead of heart rate alone.",
     caution: "Watch for fatigue, dizziness, and lower exercise tolerance.",
-    example: "Example: A patient working hard on the treadmill has only a small rise in pulse because of a beta blocker."
+    example: "A patient working hard on the treadmill has only a small rise in pulse because of a beta blocker."
   },
   {
     id: "ace-inhibitors",
@@ -67,7 +82,7 @@ const medicationData = [
     why: "Patients may take them for hypertension, heart failure, or kidney protection.",
     relevance: "Patients may participate well in therapy, but blood pressure changes can affect transfers and standing.",
     caution: "Watch for dizziness and ask whether a dry cough affects activity tolerance.",
-    example: "Example: A patient becomes lightheaded when standing after floor exercises and reports starting a new BP medicine."
+    example: "A patient becomes lightheaded when standing after floor exercises and reports starting a new BP medicine."
   },
   {
     id: "anticoagulants",
@@ -77,7 +92,7 @@ const medicationData = [
     why: "Patients may take them after clots, stroke risk, atrial fibrillation, or cardiac events.",
     relevance: "Therapy remains important, but injury prevention matters because even minor trauma can be a bigger issue.",
     caution: "Watch for unusual bruising, bleeding, or concerns after a fall or bump.",
-    example: "Example: A patient on a blood thinner reports a large bruise after lightly hitting the leg on a wheelchair footrest."
+    example: "A patient on a blood thinner reports a large bruise after lightly hitting the leg on a wheelchair footrest."
   },
   {
     id: "asthma-meds",
@@ -87,7 +102,7 @@ const medicationData = [
     why: "Patients may take them to manage asthma symptoms and prevent breathing flare-ups.",
     relevance: "Medication timing may affect how well a patient tolerates walking, stairs, or aerobic work.",
     caution: "Watch for shortness of breath, wheezing, or shakiness after some rescue medications.",
-    example: "Example: A patient uses an inhaler before a six-minute walk test and breathes more comfortably during activity."
+    example: "A patient uses an inhaler before a six-minute walk test and breathes more comfortably during activity."
   },
   {
     id: "carbidopa-levodopa",
@@ -97,7 +112,7 @@ const medicationData = [
     why: "Patients may take it to improve slowness, stiffness, and movement initiation.",
     relevance: "Sessions may go better during an “on” period when movement is easier and more efficient.",
     caution: "Watch for timing-related changes, dizziness, and movement becoming harder as medication wears off.",
-    example: "Example: A patient moves much better early in the session because therapy is scheduled close to medication time."
+    example: "A patient moves much better early in the session because therapy is scheduled close to medication time."
   },
   {
     id: "bisphosphonates",
@@ -107,7 +122,17 @@ const medicationData = [
     why: "Patients may take them for osteoporosis or low bone density.",
     relevance: "PT often focuses on loading tolerance, balance, and fracture prevention for these patients.",
     caution: "Use general bone-health precautions and note fracture history or unexplained pain.",
-    example: "Example: A patient with osteoporosis takes a bisphosphonate while working on strength and fall prevention."
+    example: "A patient with osteoporosis takes a bisphosphonate while working on strength and fall prevention."
+  },
+  {
+    id: "other-medication-approaches",
+    title: "Other Medication Approaches",
+    summary: "This page introduces broad terms students may hear when discussing nontraditional or combined care approaches.",
+    what: "A quick reference for common terms related to complementary, alternative, and integrative approaches.",
+    why: "Patients may mention these approaches when discussing symptom management, wellness, or personal health preferences.",
+    relevance: "PTs should recognize the terms, listen without judgment, and encourage safe communication with the healthcare team.",
+    caution: "Natural does not always mean low risk. Supplements and other products can still interact with medical care.",
+    example: "A patient says they use yoga, breathing exercises, and herbal supplements along with their regular medical treatment."
   }
 ];
 
@@ -151,6 +176,29 @@ const quizQuestions = [
     options: ["Acetaminophen", "NSAIDs", "Beta blockers", "Statins"],
     answer: 1,
     explanation: "NSAIDs are commonly used when both pain and inflammation are part of the problem."
+  }
+];
+
+const otherMedicationApproaches = [
+  {
+    term: "Complementary",
+    definition: "Used together with standard medical care."
+  },
+  {
+    term: "Alternative",
+    definition: "Used in place of standard medical care."
+  },
+  {
+    term: "Integrative Health",
+    definition: "Combines conventional care with selected supportive approaches in a coordinated plan."
+  },
+  {
+    term: "Natural Products",
+    definition: "Items such as herbs, vitamins, minerals, or supplements."
+  },
+  {
+    term: "Mind & Body Practices",
+    definition: "Approaches such as meditation, yoga, breathing, or tai chi that support overall well-being."
   }
 ];
 
@@ -225,10 +273,37 @@ function setActiveTopic(topicId) {
         <p>${topic.caution}</p>
       </section>
     </div>
-    <section class="topic-example">
-      <h3>Example</h3>
-      <p>${topic.example}</p>
-    </section>
+    ${topic.example ? `
+      <section class="topic-example">
+        <h3>Example</h3>
+        <p>${topic.example}</p>
+      </section>
+    ` : ""}
+    ${topic.painUse ? `
+      <section class="topic-example">
+        <h3>Pain Management Use</h3>
+        <div class="mini-reference-list">
+          ${topic.painUse.map((item) => `
+            <div class="mini-reference-list__item">
+              <p>${item}</p>
+            </div>
+          `).join("")}
+        </div>
+      </section>
+    ` : ""}
+    ${topic.id === "other-medication-approaches" ? `
+      <section class="detail-card">
+        <h3>Other Medication Approaches</h3>
+        <dl class="definition-list">
+          ${otherMedicationApproaches.map((item) => `
+            <div class="definition-list__row">
+              <dt>${item.term}</dt>
+              <dd>${item.definition}</dd>
+            </div>
+          `).join("")}
+        </dl>
+      </section>
+    ` : ""}
   `;
 }
 

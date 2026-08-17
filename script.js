@@ -323,7 +323,7 @@ function renderCurrentQuestion() {
     <article class="question-card">
       <fieldset>
         <legend>${currentQuestion.question}</legend>
-        <p class="question-meta">${quizState.retryMode ? "Retry round" : "First pass"} • Topic: ${currentQuestion.topic}</p>
+        <p class="question-meta">${quizState.retryMode ? "Retry round" : "First pass"}</p>
         <div class="question-options">
           ${currentQuestion.options.map((option, index) => `
             <label class="option-label">

@@ -1,6 +1,3 @@
-## Preview
-
-![Pharmacology Basics Interactive](assets/screenshot-home.png)
 # Pharmacology Basics for Physical Therapy
 
 ## Overview
@@ -25,15 +22,16 @@ The activity is designed to run as a standalone web page or inside a SCORM 1.2-c
 ## Local Testing Instructions
 1. Open `index.html` directly in a browser for a quick local review.
 2. For a more browser-like test environment, serve the folder with a lightweight local server.
-3. Verify that the topic dropdown and topic buttons update the center reference panel, quiz feedback appears immediately, retrying missed questions works, and the full reset button clears quiz progress.
+3. Verify that the topic buttons update the center reference panel, quiz feedback appears immediately, retrying missed questions works, and the full reset button clears quiz progress.
 4. When testing locally without an LMS, the activity should still function normally because the SCORM helper fails gracefully when no LMS API is present.
 
 ## SCORM Packaging Instructions
-1. Place `index.html`, `styles.css`, `script.js`, `scorm.js`, `imsmanifest.xml`, and any optional support files in the root of a package folder.
+1. Place `index.html`, `styles.css`, `script.js`, `scorm.js`, `imsmanifest.xml`, and the `assets/` folder in the root of a package folder.
 2. Zip the contents of that folder, not the folder itself, so `imsmanifest.xml` remains at the top level of the `.zip`.
-3. Upload the `.zip` package to a SCORM 1.2-compatible LMS.
-4. On launch, the activity attempts to initialize the LMS API, sets `cmi.core.lesson_status` to `incomplete`, and stores score updates using `cmi.core.score.raw`.
-5. When the learner reaches the end of the quiz flow, the activity sets `cmi.core.lesson_status` to `completed`. The score can continue to improve if the learner retries missed questions.
+3. The packaged file for this project is `Pharmacology_Basics_for_Physical_Therapy_SCORM12.zip`.
+4. Upload the `.zip` package to a SCORM 1.2-compatible LMS.
+5. On launch, the activity attempts to initialize the LMS API, sets `cmi.core.lesson_status` to `incomplete`, and stores score updates using `cmi.core.score.raw`.
+6. When the learner reaches the end of the quiz flow, the activity sets `cmi.core.lesson_status` to `completed`. The score can continue to improve if the learner retries missed questions.
 
 ## GitHub Documentation Notes
 - This project is fully static and can be hosted with GitHub Pages.
@@ -45,6 +43,7 @@ The activity is designed to run as a standalone web page or inside a SCORM 1.2-c
 - The activity uses semantic headings, buttons, fieldsets, legends, and labeled radio inputs.
 - A skip link is included for keyboard users.
 - Focus states are intentionally visible and use strong contrast.
-- The topic selector uses a labeled dropdown plus keyboard-accessible topic buttons for quick navigation.
+- The navigation uses keyboard-accessible topic buttons for quick movement between medication reference pages.
 - Quiz feedback is announced through live regions and remains visible after each answer.
 - The layout is responsive for smaller screens and stacks the dashboard sections vertically when space is limited.
+- Current color choices and focus states were checked to keep text and interface controls within a WCAG AA-friendly contrast range.
